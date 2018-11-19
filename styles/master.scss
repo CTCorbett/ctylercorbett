@@ -1,4 +1,8 @@
 // master.scss — Master SASS file containing all dependencies
 
 @import 'reset';
-@import 'colors';
+@import 'branding';
+
+body {
+  background: $base;
+}
