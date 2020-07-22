@@ -6,6 +6,38 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
 /* -------------------- */
 
 /* ---------------------------------------------------------------------------*/
+/*                           VARIABLE DEFINITIONS                             */
+/* ---------------------------------------------------------------------------*/
+
+:root {
+/* Black Values */
+  --cosmos-darkest: #161517;
+  --cosmos-dark: #252326;
+  --cosmos: #3B383D;
+  --cosmos-light: #5E5861;
+  --cosmos-lightest: #7C7480;
+/* White Values */
+  --mercury-darkest: #B0AAB2;
+  --mercury-dark: #D5CED9;
+  --mercury: #EEE6F2;
+  --mercury-light: #FAF5FC;
+  --mercury-lightest: #FFFFFF;
+/* Gold Values */
+  --sulphur-darkest: #99633D;
+  --sulphur-dark: #B28150;
+  --sulphur: #CCA266;
+  --sulphur-light: #E5C37E;
+  --sulphur-lightest: #FFE599;
+/* Blue Values */
+  --salt-darkest: #0055FF;
+  --salt-dark: #0080FF;
+  --salt: #00AAFF;
+  --salt-light: #00D4FF;
+  --salt-lightest: #80FFFF;
+/* Gradients */
+}
+
+/* ---------------------------------------------------------------------------*/
 /*                                BASE STYLES                                 */
 /* ---------------------------------------------------------------------------*/
 
