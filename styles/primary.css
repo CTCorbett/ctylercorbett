@@ -57,8 +57,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
 }
 
 body {
-  background: #171719;
-  color: #E7E7E7;
+  background: var(--radial-void);
+  color: var(--mercury);
   display: flex;
   flex-direction: column;
   font-family: 'Playfair Display', serif;
@@ -123,7 +123,7 @@ header h1 {
 }
 
 .card {
-  background: #272729;
+  background: var(--radial-coal);
   border-radius: 8px;
   box-shadow: 0px 2px 16px 2px rgba(0,0,0,.5), inset 0.5px 1px 1px rgba(255,255,255,.09);
   margin: 0 auto 32px;
@@ -189,6 +189,7 @@ nav.brand-nav ul {
   display: block;
   height: 32px;
   font-size: 1.24rem;
+  font-weight: 600;
   margin-top: 24px;
 }
 
@@ -201,7 +202,7 @@ nav.brand-nav ul {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left top;
-  border-radius: 4px;
+  border-radius: 50%;
   display: inline-block;
   background-color: #C8A664;
   width: 32px;
