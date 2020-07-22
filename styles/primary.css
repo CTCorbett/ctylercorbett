@@ -38,7 +38,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
   --radial-void: radial-gradient(ellipse at top, rgba(59,56,61,1) 0%, rgba(22,21,23,1) 100%);
   --radial-coal: radial-gradient(ellipse at top, rgba(94,88,97,1) 0%, rgba(37,35,38,1) 100%);
   --radial-medallion: radial-gradient(circle at top, rgba(255,229,153,1) 0%, rgba(178,129,80,1) 100%);
-  --radial-mana: radial-gradient(circle at bottom, rgba(128,255,255,1) 0%, rgba(0,170,255,1) 100%);
+  --radial-mana: radial-gradient(circle at bottom, rgba(128,255,255,1) 0%, rgba(0,128,255,1) 100%);
   --radial-sapphire: radial-gradient(circle at top, rgba(128,255,255,1) 0%, rgba(0,170,255,1) 25%, rgba(0,85,255,1) 75%, rgba(0,128,255,1) 100%);
   --linear-foil: linear-gradient(180deg, rgba(255,229,153,1) 0%, rgba(204,162,102,1) 33%, rgba(229,195,126,1) 67%, rgba(153,99,61,1) 100%);
   --linear-casting: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,170,255,1) 100%);
@@ -85,19 +85,19 @@ h3 {
 }
 
 h4 {
-  color: #808080;
-  font-weight: 400;
+  color: var(--cosmos-lightest);
+  font-weight: 600;
 }
 
 a {
-  color: #C8A664;
+  color: var(--sulphur);
   text-decoration: none;
 }
 
 a:hover {
-  color: #00AAFF;
+  color: var(--salt);
   text-decoration: underline;
-  text-shadow: 0px 0px 16px 4px rgba(0,106,255,1);
+  text-shadow: 0px 0px 16px 4px var(--salt);
 }
 
 em {
@@ -105,7 +105,7 @@ em {
 }
 
 header h1 {
-  color: #E7E7E7;
+  color: var(--mercury-dark);
   text-align: center;
   font-size: 1.38rem;
   margin: 32px 0 64px;
@@ -124,7 +124,7 @@ header h1 {
 
 .card {
   background: var(--radial-coal);
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0px 2px 16px 2px rgba(0,0,0,.5), inset 0.5px 1px 1px rgba(255,255,255,.09);
   margin: 0 auto 32px;
   padding: 16px;
@@ -146,8 +146,8 @@ header h1 {
 } */
 
 .card h5 {
-  border: 2px solid #C8A664;
-  border-radius: 4px;
+  border: 2px solid var(--sulphur);
+  border-radius: 6px;
   box-shadow:
     1px 1px 1px rgba(255,255,255,.09),
     -1px -1px 1px rgba(0,0,0,.24),
@@ -204,7 +204,6 @@ nav.brand-nav ul {
   background-position: left top;
   border-radius: 50%;
   display: inline-block;
-  background-color: #C8A664;
   width: 32px;
   height: 32px;
   margin-right: 16px;
@@ -212,26 +211,38 @@ nav.brand-nav ul {
 }
 
 .brand-nav a:hover::before {
-  background-color: #00AAFF;
-  box-shadow: 0px 0px 24px rgba(0,106,255,1);
+  box-shadow: 0px -4px 16px rgba(0,128,255,1);
   transition: all 0.3s ease-out;
 }
 
-.twitter::before {background-image: url(../images/icon-twitter.svg);}
-.dribbble::before {background-image: url(../images/icon-dribbble.svg);}
-.medium::before {background-image: url(../images/icon-medium.svg);}
-.tumblr::before {background-image: url(../images/icon-tumblr.svg);}
-.discord::before {background-image: url(../images/icon-discord.svg);}
-.github::before {background-image: url(../images/icon-github.svg);}
-.site::before {background-image: url(../images/icon-site.svg);}
-.procreate::before {background-image: url(../images/icon-procreate.svg);}
-.itch::before {background-image: url(../images/icon-itch.svg);}
-.vsco::before {background-image: url(../images/icon-vsco.svg);}
-.society6::before {background-image: url(../images/icon-society6.svg);}
-.figma::before {background-image: url(../images/icon-figma.svg);}
+.twitter::before {background-image: url(../images/icon-twitter.svg), var(--radial-medallion);}
+.dribbble::before {background-image: url(../images/icon-dribbble.svg), var(--radial-medallion);}
+.medium::before {background-image: url(../images/icon-medium.svg), var(--radial-medallion);}
+.tumblr::before {background-image: url(../images/icon-tumblr.svg), var(--radial-medallion);}
+.discord::before {background-image: url(../images/icon-discord.svg), var(--radial-medallion);}
+.github::before {background-image: url(../images/icon-github.svg), var(--radial-medallion);}
+.site::before {background-image: url(../images/icon-site.svg), var(--radial-medallion);}
+.procreate::before {background-image: url(../images/icon-procreate.svg), var(--radial-medallion);}
+.itch::before {background-image: url(../images/icon-itch.svg), var(--radial-medallion);}
+.vsco::before {background-image: url(../images/icon-vsco.svg), var(--radial-medallion);}
+.society6::before {background-image: url(../images/icon-society6.svg), var(--radial-medallion);}
+.figma::before {background-image: url(../images/icon-figma.svg), var(--radial-medallion);}
+
+.twitter:hover::before {background-image: url(../images/icon-twitter.svg), var(--radial-mana);}
+.dribbble:hover::before {background-image: url(../images/icon-dribbble.svg), var(--radial-mana);}
+.medium:hover::before {background-image: url(../images/icon-medium.svg), var(--radial-mana);}
+.tumblr:hover::before {background-image: url(../images/icon-tumblr.svg), var(--radial-mana);}
+.discord:hover::before {background-image: url(../images/icon-discord.svg), var(--radial-mana);}
+.github:hover::before {background-image: url(../images/icon-github.svg), var(--radial-mana);}
+.site:hover::before {background-image: url(../images/icon-site.svg), var(--radial-mana);}
+.procreate:hover::before {background-image: url(../images/icon-procreate.svg), var(--radial-mana);}
+.itch:hover::before {background-image: url(../images/icon-itch.svg), var(--radial-mana);}
+.vsco:hover::before {background-image: url(../images/icon-vsco.svg), var(--radial-mana);}
+.society6:hover::before {background-image: url(../images/icon-society6.svg), var(--radial-mana);}
+.figma:hover::before {background-image: url(../images/icon-figma.svg), var(--radial-mana);}
 
 footer {
-  color: #808080;
+  color: var(--cosmos-lightest);
   font-size: .62rem;
   margin-bottom: 64px;
   text-align: center;
@@ -277,7 +288,7 @@ footer a.theme-toggle:hover {
 
 @media (min-width: 800px) {
   h1 {
-    color: #808080;
+    color: var(--cosmos-lightest);
     text-align: left;
   }
 
@@ -305,13 +316,13 @@ footer a.theme-toggle:hover {
 
   .brand-nav a {
     font-size: 1rem;
-    margin-top: 16px;
+    margin-top: 32px;
   }
 
   .brand-nav a:before {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
   }
 
   footer {
