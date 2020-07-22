@@ -35,6 +35,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
   --salt-light: #00D4FF;
   --salt-lightest: #80FFFF;
 /* Gradients */
+  --radial-void: radial-gradient(ellipse at top, rgba(59,56,61,1) 0%, rgba(22,21,23,1) 100%);
+  --radial-coal: radial-gradient(ellipse at top, rgba(94,88,97,1) 0%, rgba(37,35,38,1) 100%);
+  --radial-medallion: radial-gradient(circle at top, rgba(255,229,153,1) 0%, rgba(178,129,80,1) 100%);
+  --radial-mana: radial-gradient(circle at bottom, rgba(128,255,255,1) 0%, rgba(0,170,255,1) 100%);
+  --radial-sapphire: radial-gradient(circle at top, rgba(128,255,255,1) 0%, rgba(0,170,255,1) 25%, rgba(0,85,255,1) 75%, rgba(0,128,255,1) 100%);
+  --linear-foil: linear-gradient(180deg, rgba(255,229,153,1) 0%, rgba(204,162,102,1) 33%, rgba(229,195,126,1) 67%, rgba(153,99,61,1) 100%);
+  --linear-casting: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,170,255,1) 100%);
 }
 
 /* ---------------------------------------------------------------------------*/
