@@ -36,7 +36,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
   --salt-lightest: #80FFFF;
 /* Gradients */
   --radial-void: radial-gradient(ellipse at top, rgba(59,56,61,1) 0%, rgba(22,21,23,1) 100%);
-  --radial-coal: radial-gradient(ellipse at top, rgba(94,88,97,1) 0%, rgba(37,35,38,1) 100%);
+  --radial-coal: radial-gradient(ellipse at top, rgba(59,56,61,1) 0%, rgba(37,35,38,1) 100%);
   --radial-medallion: radial-gradient(circle at top, rgba(255,229,153,1) 0%, rgba(178,129,80,1) 100%);
   --radial-mana: radial-gradient(circle at bottom, rgba(128,255,255,1) 0%, rgba(0,128,255,1) 100%);
   --radial-sapphire: radial-gradient(circle at top, rgba(128,255,255,1) 0%, rgba(0,170,255,1) 25%, rgba(0,85,255,1) 75%, rgba(0,128,255,1) 100%);
@@ -53,20 +53,24 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {d
 }
 
 *:hover {
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 body {
   background: var(--radial-void);
+  background-repeat: no-repeat;
   color: var(--mercury);
-  display: flex;
-  flex-direction: column;
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: .038rem;
   padding: 32px;
   min-height: 100vh;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h4, h5 {
@@ -125,7 +129,7 @@ header h1 {
 .card {
   background: var(--radial-coal);
   border-radius: 16px;
-  box-shadow: 0px 2px 16px 2px rgba(0,0,0,.5), inset 0.5px 1px 1px rgba(255,255,255,.09);
+  box-shadow: 0px 4px 16px 2px rgba(0,0,0,.24), inset 0.5px 1px 1px rgba(255,255,255,.09);
   margin: 0 auto 32px;
   padding: 16px;
 }
@@ -261,10 +265,20 @@ small {
   margin: 16px;
 }
 
+footer #triutum {
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 9001;
+}
+
+footer #triutum:hover {
+  cursor: pointer;
+}
+
 footer .tria-prima {
   display: block;
   margin: 16px auto;
-  opacity: .5;
 }
 
 /* footer a.theme-toggle {
@@ -281,6 +295,56 @@ footer a.theme-toggle:hover {
   box-shadow: 0px 0px 24px rgba(255,255,255,.5), inset 0px 0px 16px rgba(255,255,255,.5);
   opacity: 1;
 } */
+
+/* ---------------------------------------------------------------------------*/
+/*                              TRIUTUM MODAL                                 */
+/* ---------------------------------------------------------------------------*/
+
+#triutum-modal {
+  background: rgba(22,21,23,.62);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 32px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  text-shadow: 0px 2px 8px rgba(0,0,0,1);
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+#triutum-modal section {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#triutum-modal section > p {
+  margin: 64px 0;
+  font-size: 1.47rem;
+}
+
+#triutum-modal figure {
+  color: var(--mercury-darkest);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+figure blockquote, cite {
+  font-style: italic;
+}
+
+figcaption {
+  font-size: .77rem;
+  margin-top: 16px;
+}
+
+cite a { color: var(--mercury-darkest); }
+cite a:hover { color: var(--mercury-lightest); }
+
+.dialogIsOpen #wrapper { filter: blur(16px); }
+.dialogIsOpen #triutum-modal { opacity: 1; pointer-events: auto; }
 
 /* ---------------------------------------------------------------------------*/
 /*                            CONTENT BREAK ONE                               */
@@ -371,6 +435,10 @@ footer a.theme-toggle:hover {
   footer h1 {
     font-size: 1.38;
   }
+
+  #triutum-modal {
+    padding: 64px;
+  }
 }
 
 /* ---------------------------------------------------------------------------*/
@@ -390,6 +458,10 @@ footer a.theme-toggle:hover {
 
   footer {
     bottom: 128px;
+  }
+
+  #triutum-modal {
+    padding: 128px;
   }
 }
 
