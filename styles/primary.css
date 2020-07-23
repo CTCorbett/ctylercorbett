@@ -64,13 +64,13 @@ body {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: .038rem;
-  padding: 32px;
-  min-height: 100vh;
 }
 
 #wrapper {
   display: flex;
   flex-direction: column;
+  padding: 32px;
+  min-height: 100vh;
 }
 
 h1, h2, h4, h5 {
@@ -134,20 +134,10 @@ header h1 {
   padding: 16px;
 }
 
-/* .card:hover {
-  background: #232329;
-  cursor: pointer;
-} */
-
 .card h2 {
   text-align: center;
   font-weight: 900;
 }
-
-/* .card:hover h2{
-  color: #00AAFF;
-  text-shadow: 0px 0px 16px 4px rgba(0,106,255,1);
-} */
 
 .card h5 {
   border: 2px solid var(--sulphur);
@@ -167,13 +157,6 @@ header h1 {
     1px 1px 1px rgba(255,255,255,.09),
     -1px -1px 1px rgba(0,0,0,.24);
 }
-
-/* .card:hover h5 {
-  border-color: #00AAFF;
-  box-shadow: 0px 0px 24px rgba(0,106,255,1), inset 0px 0px 16px rgba(0,106,255,1);
-  color: #00AAFF;
-  text-shadow: 0px 0px 16px 4px rgba(0,106,255,1);
-} */
 
 .card-details p {
   margin: 16px 0 0;
@@ -276,25 +259,10 @@ footer #triutum:hover {
   cursor: pointer;
 }
 
-footer .tria-prima {
+footer .triutum-glyph {
   display: block;
   margin: 16px auto;
 }
-
-/* footer a.theme-toggle {
-  border: solid 1.5px #FFF;
-  border-radius: 50%;
-  display: block;
-  margin: 32px auto;
-  opacity: .5;
-  padding: 8px;
-  width: 32px;
-}
-
-footer a.theme-toggle:hover {
-  box-shadow: 0px 0px 24px rgba(255,255,255,.5), inset 0px 0px 16px rgba(255,255,255,.5);
-  opacity: 1;
-} */
 
 /* ---------------------------------------------------------------------------*/
 /*                              TRIUTUM MODAL                                 */
@@ -313,11 +281,12 @@ footer a.theme-toggle:hover {
 
   opacity: 0;
   pointer-events: none;
+  transition: all 0.4s ease-in;
 }
 
 #triutum-modal section {
   max-width: 640px;
-  margin: 0 auto;
+  margin: 64px auto 0;
 }
 
 #triutum-modal section > p {
@@ -345,74 +314,35 @@ cite a:hover { color: var(--mercury-brightest); }
 
 .dialogIsOpen #wrapper { filter: blur(16px); }
 .dialogIsOpen #triutum-modal { opacity: 1; pointer-events: auto; }
+.dialogIsOpen #triutum-modal section { margin: 0 auto; transition: all 0.4s ease-out; }
 
 /* ---------------------------------------------------------------------------*/
 /*                            CONTENT BREAK ONE                               */
 /* ---------------------------------------------------------------------------*/
 
 @media (min-width: 800px) {
-  h1 {
-    color: var(--cosmos-brightest);
-    text-align: left;
-  }
-
-  header h1 {
-    display: none;
-  }
-
-  .deck {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-
-  .aspect-col {
-    margin: 0 16px;
-    width: 33.333%;
-    max-width: none;
-  }
-
+  h1 { color: var(--cosmos-brightest); text-align: left; }
+  header h1 { display: none; }
+  .deck { display: flex; flex-flow: row nowrap; }
+  .aspect-col { margin: 0 16px; width: 33.333%; max-width: none; }
   #planner {margin-left: 0;}
   #builder {margin-right: 0;}
-
-  .card-details p {
-    margin: 16px 0;
-  }
-
-  .brand-nav a {
-    font-size: 1rem;
-    margin-top: 32px;
-  }
-
-  .brand-nav a:before {
-    width: 32px;
-    height: 32px;
-    margin-right: 16px;
-  }
-
+  .card-details p { margin: 16px 0; }
+  .brand-nav a { font-size: 1rem; margin-top: 24px; }
+  .brand-nav a:before { width: 32px; height: 32px; margin-right: 12px; }
   footer {
     align-items: center;
     display: flex;
     justify-content: space-between;
     text-align: right;
     margin-top: auto;
-    margin-bottom: 0;
-    /* width: 100%; */
-  }
-
+    margin-bottom: 0; }
   footer h1 {
     display: block;
     font-size: 1.24rem;
-    min-width: 24%;
-  }
-
-  footer section {
-    min-width: 24%;
-  }
-
-  blockquote, small {
-    margin: 0;
-    padding: 0;
-  }
+    min-width: 24%; }
+  footer section { min-width: 24%; }
+  blockquote, small { margin: 0; padding: 0; }
 }
 
 /* ---------------------------------------------------------------------------*/
@@ -420,25 +350,11 @@ cite a:hover { color: var(--mercury-brightest); }
 /* ---------------------------------------------------------------------------*/
 
 @media (min-width: 960px) {
-  body {
-    padding: 64px;
-  }
-
-  .aspect-col {
-    margin: 0 32px;
-  }
-
-  footer {
-    bottom: 32px;
-  }
-
-  footer h1 {
-    font-size: 1.38;
-  }
-
-  #triutum-modal {
-    padding: 64px;
-  }
+  #wrapper { padding: 64px; }
+  .aspect-col { margin: 0 32px; }
+  footer { bottom: 32px; }
+  footer h1 { font-size: 1.38; }
+  #triutum-modal { padding: 64px; }
 }
 
 /* ---------------------------------------------------------------------------*/
@@ -446,23 +362,11 @@ cite a:hover { color: var(--mercury-brightest); }
 /* ---------------------------------------------------------------------------*/
 
 @media (min-width: 1440px) {
-  body {
-    max-width: 1600px;
-    padding: 128px 128px 160px;
-    margin: 0 auto;
-  }
-
-  .aspect-col {
-    margin: 0 64px;
-  }
-
-  footer {
-    bottom: 128px;
-  }
-
-  #triutum-modal {
-    padding: 128px;
-  }
+  body { max-width: 1600px; margin: 0 auto; }
+  #wrapper { padding: 128px 128px 160px; }
+  .aspect-col { margin: 0 64px; }
+  footer { bottom: 128px; }
+  #triutum-modal { padding: 128px; }
 }
 
 /* ---------------------------------------------------------------------------*/
