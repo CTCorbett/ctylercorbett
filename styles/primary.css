@@ -214,6 +214,7 @@ nav.brand-nav ul {
 .vsco::before {background-image: url(../images/icon-vsco.svg), var(--radial-medallion);}
 .society6::before {background-image: url(../images/icon-society6.svg), var(--radial-medallion);}
 .figma::before {background-image: url(../images/icon-figma.svg), var(--radial-medallion);}
+.kofi::before {background-image: url(../images/icon-kofi.svg), var(--radial-medallion);}
 
 .twitter:hover::before {background-image: url(../images/icon-twitter.svg), var(--radial-mana);}
 .dribbble:hover::before {background-image: url(../images/icon-dribbble.svg), var(--radial-mana);}
@@ -227,6 +228,7 @@ nav.brand-nav ul {
 .vsco:hover::before {background-image: url(../images/icon-vsco.svg), var(--radial-mana);}
 .society6:hover::before {background-image: url(../images/icon-society6.svg), var(--radial-mana);}
 .figma:hover::before {background-image: url(../images/icon-figma.svg), var(--radial-mana);}
+.kofi:hover::before {background-image: url(../images/icon-kofi.svg), var(--radial-mana);}
 
 footer {
   color: var(--cosmos-brightest);
